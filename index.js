@@ -1,8 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
+import App from "./app";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router } from "react-router-dom";
 
-function Hola() {
-  return <p>hola desde home test</p>;
-}
-
-render(<Hola></Hola>, document.getElementById("app"));
+render(
+  <Router>
+    <App></App>
+  </Router>,
+  document.getElementById("app")
+);
